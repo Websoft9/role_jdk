@@ -1,15 +1,14 @@
-Ansible Role: node.js
+Ansible Role: JDK
 =========
 
-本 Role 用于在PHP运行环境下安装 [node.js](https://nodejs.org/en/)。
-
+本 Role 用于在 CentOS Ubuntu AmazonLinx 安装 JDK。
 ## Requirements
 
 运行本 Role，请确认符合如下的必要条件：
 
 | **Items**      | **Details** |
 | ------------------| ------------------|
-| Operating system | CentOS7.x Ubuntu18.04 AmazonLinux |
+| Operating system | CentOS7.x， Ubuntu， AmazonLinux |
 | Python 版本 | Python2  |
 | Python 组件 |    |
 | Runtime |  |
@@ -17,41 +16,31 @@ Ansible Role: node.js
 
 ## Related roles
 
-本 Role 在运行时需要确保已经运行：common。以下为例：
+本 Role 在语法不依赖其他 role 的变量，但程序运行时需要确保已经运行：common Role， 局里说明：：
 
 ```
 roles:
     - {role: role_common, tags: "role_common"}
-    - {role: role_node.js , tags: "role_node.js  "}
+    - {role: role_jdk, tags: "role_jdk"}
 ```
-
 
 ## Variables
 
-本 Role 主要变量以及使用方法如下：
-
-| **Items**      | **Details** | **Format**  | **是否初始化** |
-| ------------------| ------------------|-----|-----|
-| nodejs_version | [ 10 ] | 字符串 | 否 |
-
-
+暂无
 
 ## Example
 
 ```
-- name: Node.js
+- name: example
   hosts: all
   become: yes
   become_method: sudo 
   vars_files:
     - vars/main.yml 
-
-  roles:
-    - { role: role_common }
-    - { role: role_node.js   }
-    ...
+  
+  role:
+    - {role: role_common, tags: "role_common"}
+    - {role: role_jdk, tags: "role_jdk"}
 ```
 
 ## FAQ
-
-
