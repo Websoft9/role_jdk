@@ -5,6 +5,6 @@
   when: ansible_os_family == 'Debian' 
 
 - name: Check JAVA Version
-  shell: java --version
+  shell: java -version
   register: java_ver
   notify: java Version
