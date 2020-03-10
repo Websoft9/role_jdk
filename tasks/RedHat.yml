@@ -2,7 +2,7 @@
 - name: Install openjdk
   yum:
     name: "java-1.{{jdk_version}}.0-openjdk"
-  when: jdk_version < "8"
+  when: jdk_version <="8"
 
 # JDK11版本以及一上版本
 - name: Install openjdk

@@ -1,3 +1,4 @@
 - name: java Version
   debug:
     var: java_ver.stdout
+    
