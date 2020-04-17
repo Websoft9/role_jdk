@@ -3,7 +3,7 @@
     name: "{{jdk_meta[jdk_version].yum_name}}"
 
 - debug:
-    msg: {{jdk_meta[jdk_version].yum_name}}
+    msg: "{{jdk_meta[jdk_version].yum_name}}"
 
 # AmazonLinux JDK11版本以及一上版本
 - name: Install openjdk
