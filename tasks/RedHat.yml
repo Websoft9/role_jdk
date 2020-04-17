@@ -2,7 +2,7 @@
     yum_name: "{{jdk_meta[jdk_version].yum_name}}"
 
 - debug:
-    msg: "{{yum_name}}" will be installed
+    msg: Installing {{yum_name}} 
     
 - name: Install openjdk
   yum:
