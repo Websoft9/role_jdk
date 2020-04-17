@@ -7,14 +7,15 @@ jdk_version: "8"
 # jdk metas
 jdk_meta:
   "6":
-    package_name: "java-1.6.0-openjdk"
+    yum_name: "java-1.6.0-openjdk"
+    apt_name: 
     service: ""
   "7":
-    package_name: "java-1.7.0-openjdk"
+    yum_name: "java-1.7.0-openjdk"
     service: ""
   "8":
-    package_name: "java-1.8.0-openjdk"
+    yum_name: "java-1.8.0-openjdk"
     service: ""
   "11":
-    package_name: "java-11-openjdk"
+    yum_name: "java-11-openjdk"
     service: ""
