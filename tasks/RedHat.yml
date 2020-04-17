@@ -1,9 +1,13 @@
-- name: Install openjdk
-  yum:
-    name: "{{jdk_meta[jdk_version].yum_name}}"
+- set_fact:
+    yum_name: "{{jdk_meta[jdk_version].yum_name}}"
 
 - debug:
-    msg: "{{jdk_meta[jdk_version].yum_name}}"
+    msg: "{{yum_name}}" will be installed
+    
+- name: Install openjdk
+  yum:
+    name: "{{yum_name}}"
+    state: present
 
 # AmazonLinux JDK11版本以及一上版本
 - name: Install openjdk
