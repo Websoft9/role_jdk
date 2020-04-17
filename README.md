@@ -1,7 +1,8 @@
 Ansible Role: JDK
 =========
 
-本 Role 用于在 CentOS Ubuntu AmazonLinx 安装 JDK。
+本 Role 用于在 CentOS Ubuntu AmazonLinx 安装 [JDK](http://openjdk.java.net/install/)。
+
 ## Requirements
 
 运行本 Role，请确认符合如下的必要条件：
