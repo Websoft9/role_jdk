@@ -1,14 +1,6 @@
-# JDK8版本以及一下版本
 - name: Install openjdk
   yum:
-    name: "java-1.{{jdk_version}}.0-openjdk"
-  when: jdk_version !="11" or jdk_version !=11
-
-# JDK11版本以及一上版本
-- name: Install openjdk
-  yum:
-    name: "java-{{jdk_version}}-openjdk"
-  when: jdk_version =="11" or jdk_version ==11
+    name: "{{jdk_meta[jdk_version].yum_name}}"
 
 # AmazonLinux JDK11版本以及一上版本
 - name: Install openjdk
