@@ -2,7 +2,7 @@
 
 ## To do
 
-1. AmazonLinux版本处理（jdk_meta）
+1. AmazonLinux版本处理（jdk_meta）, 11 不支持
 2. Java环境变量问题：https://blog.csdn.net/weixin_37550903/article/details/80672580
 3. JRE和JDK问题
 
