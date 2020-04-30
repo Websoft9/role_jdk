@@ -1,11 +1,10 @@
 - set_fact:
-    yum_name: "{{jdk_meta[jdk_version].yum_name}}"
-    yum_name_aws: "{{jdk_meta[jdk_version].yum_name_aws}}"
+    yum_name: "{{jdk_meta[jdk_version][jdk_distribution].yum_name}}"
+    when: ansible_distribution != 'Amazon'
 
 - set_fact:
-    yum_name: "{{yum_name}}-devel"
-    yum_name_aws: "{{yum_name_aws}}-devel"
-  when: jdk_distribution == "jdk"
+    yum_name: "{{jdk_meta[jdk_version][jdk_distribution].yum_name_aws}}"
+    when: ansible_distribution == 'Amazon'
     
 - debug:
     msg: Installing {{yum_name}} 
@@ -14,10 +13,3 @@
   yum:
     name: "{{yum_name}}"
     state: present
-  when: ansible_distribution != 'Amazon'
-
-- name: Install openjdk on {{ansible_distribution}}
-  yum:
-    name: "{{yum_name_aws}}"
-    state: present
-  when: ansible_distribution == 'Amazon'
