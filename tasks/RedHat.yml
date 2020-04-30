@@ -1,9 +1,9 @@
 - set_fact:
-    yum_name: "{{jdk_meta[jdk_version][jdk_distribution].yum_name}}"
+    yum_name: "{{jdk_meta_redhat[jdk_version][jdk_distribution].yum_name}}"
     when: ansible_distribution != 'Amazon'
 
 - set_fact:
-    yum_name: "{{jdk_meta[jdk_version][jdk_distribution].yum_name_aws}}"
+    yum_name: "{{jdk_meta_redhat[jdk_version][jdk_distribution].yum_name_aws}}"
     when: ansible_distribution == 'Amazon'
     
 - debug:
