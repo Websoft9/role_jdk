@@ -7,7 +7,6 @@
     yum_name_aws: "{{yum_name_aws}}-devel"
     when: jdk_distribution == "jdk"
     
-
 - debug:
     msg: Installing {{yum_name}} 
     
