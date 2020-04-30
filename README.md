@@ -1,7 +1,7 @@
 Ansible Role: JDK
 =========
 
-本 Role 用于安装 [JDK](http://openjdk.java.net/install/)。
+本 Role 用于安装 [JRE/JDK](http://openjdk.java.net/install/)。JDK=JRE+开发者工具包
 
 ## Requirements
 
@@ -45,3 +45,7 @@ roles:
 ```
 
 ## FAQ
+
+#### JDK与JRE有什么区别？
+
+JDK=JRE+开发者工具包，JRE 全称是Java Runtime Environment，JDK全称是Java Development Kit  
