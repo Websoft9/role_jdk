@@ -1,5 +1,6 @@
+# e.g openjdk-11-jre, openjdk-11-jdk
+
 - name: Install open jdk
   apt:
-    name: ["openjdk-{{jdk_version}}-jdk","openjdk-{{jdk_version}}-jre"]
+    name: "openjdk-{{jdk_version}}-{{jdk_distribution}}"
     update_cache: yes
-
