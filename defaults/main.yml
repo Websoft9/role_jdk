@@ -8,13 +8,21 @@ jdk_version: "8"
 jdk_meta:
   "6":
     yum_name: "java-1.6.0-openjdk"
+    yum_name_aws: "java-1.6.0-openjdk"
     service: ""
   "7":
     yum_name: "java-1.7.0-openjdk"
+    yum_name_aws: "java-1.7.0-openjdk"
     service: ""
   "8":
     yum_name: "java-1.8.0-openjdk"
+    yum_name_aws: "java-1.8.0-openjdk"
     service: ""
   "11":
     yum_name: "java-11-openjdk"
+    yum_name_aws: "java-11-amazon-corretto"
+    service: ""
+  "14":
+    yum_name: "java-latest-openjdk"
+    yum_name_aws: "java-latest-openjdk"
     service: ""
