@@ -1,16 +1,18 @@
 - set_fact:
     yum_name: "{{jdk_meta[jdk_version].yum_name}}"
+    yum_name_aws: "{{jdk_meta[jdk_version].yum_name_aws}}"
 
 - debug:
     msg: Installing {{yum_name}} 
     
-- name: Install openjdk
+- name: Install openjdk on {{ansible_distribution}}
   yum:
     name: "{{yum_name}}"
     state: present
+  when: ansible_distribution != 'Amazon'
 
-# AmazonLinux JDK11版本以及一上版本
-- name: Install openjdk
+- name: Install openjdk on {{ansible_distribution}}
   yum:
-    name: "java-{{jdk_version}}"
-  when: jdk_version > '8' and  ansible_distribution == 'Amazon'
+    name: "{{yum_name_aws}}"
+    state: present
+  when: ansible_distribution == 'Amazon'
