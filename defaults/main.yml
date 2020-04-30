@@ -14,27 +14,37 @@ jdk_distribution: "jre"
 
 jdk_meta:
   "6":
-    yum_jre: "java-1.6.0-openjdk"
-    yum_jre_aws: ""
-    yum_jdk: "java-1.6.0-openjdk-devel"
-    yum_jdk_aws: ""
+    jre:
+      yum_name: "java-1.6.0-openjdk"
+      yum_name_aws: ""
+    jdk:
+      yum_name: "java-1.6.0-openjdk-devel"
+      yum_name_aws: ""
   "7":
-    yum_jre: "java-1.7.0-openjdk"
-    yum_jre_aws: "java-1.7.0-openjdk"
-    yum_jdk: "java-1.7.0-openjdk-devel"
-    yum_jdk_aws: "java-1.7.0-openjdk-devel"
+    jre:
+      yum_name: "java-1.7.0-openjdk"
+      yum_name_aws: "java-1.7.0-openjdk"
+    jdk:
+      yum_name: "java-1.7.0-openjdk-devel"
+      yum_name_aws: "java-1.7.0-openjdk-devel"
   "8":
-    yum_jre: "java-1.8.0-openjdk"
-    yum_jre_aws: "java-1.8.0-openjdk"
-    yum_jdk: "java-1.8.0-openjdk-devel"
-    yum_jdk_aws: "java-1.8.0-openjdk-devel"
+    jre:
+      yum_name: "java-1.8.0-openjdk"
+      yum_name_aws: "java-1.8.0-openjdk"
+    jdk:
+      yum_name: "java-1.8.0-openjdk-devel"
+      yum_name_aws: "java-1.8.0-openjdk-devel"
   "11":
-    yum_jre: "java-11-openjdk"
-    yum_jre_aws: "java-11-amazon-corretto"
-    yum_jdk: "java-11-openjdk-devel"
-    yum_jdk_aws: "java-11-amazon-corretto"
+    jre:
+      yum_name: "java-11-openjdk"
+      yum_name_aws: "java-11-amazon-corretto"
+    jdk:
+      yum_name: "java-11-openjdk-devel"
+      yum_name_aws: "java-11-amazon-corretto"
   "14":
-    yum_jre: "java-latest-openjdk"
-    yum_jre_aws: "java-latest-openjdk"
-    yum_jdk: "java-latest-openjdk-devel"
-    yum_jdk_aws: "java-latest-openjdk-devel"
+    jre:
+      yum_name: "java-latest-openjdk"
+      yum_name_aws: "java-latest-openjdk"
+    jdk:
+      yum_name: "java-latest-openjdk-devel"
+      yum_name_aws: "java-latest-openjdk-devel"
