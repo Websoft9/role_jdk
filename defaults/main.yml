@@ -15,7 +15,7 @@ jdk_distribution: "jre"
 jdk_meta:
   "6":
     yum_name: "java-1.6.0-openjdk"
-    yum_name_aws: "java-1.6.0-openjdk"
+    yum_name_aws: ""
     jdk_tail: "-devel"
   "7":
     yum_name: "java-1.7.0-openjdk"
