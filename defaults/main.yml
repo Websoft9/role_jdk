@@ -12,7 +12,7 @@ jdk_distribution: "jre"
 # java-1.6.0-openjdk is JRE name, java-1.6.0-openjdk-devel is JDK name
 # AmazonLinux2, only JDK 11, no JRE
 
-jdk_meta:
+jdk_meta_redhat:
   "6":
     jre:
       yum_name: "java-1.6.0-openjdk"
