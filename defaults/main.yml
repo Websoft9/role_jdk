@@ -4,7 +4,10 @@
 
 jdk_version: "8" 
 
-# jdk metas
+# jdk metas, default for JRE
+# JDK=JRE+development kit
+# java-1.6.0-openjdk is JRE name, java-1.6.0-openjdk-devel is JDK name
+
 jdk_meta:
   "6":
     yum_name: "java-1.6.0-openjdk"
