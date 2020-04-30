@@ -2,6 +2,12 @@
     yum_name: "{{jdk_meta[jdk_version].yum_name}}"
     yum_name_aws: "{{jdk_meta[jdk_version].yum_name_aws}}"
 
+- set_fact:
+    yum_name: {{yum_name}}--devel
+    yum_name_aws: {{yum_name_aws}}-devel
+    when: jdk_distribution == "jdk"
+    
+
 - debug:
     msg: Installing {{yum_name}} 
     
