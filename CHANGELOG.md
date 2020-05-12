@@ -4,6 +4,7 @@
 
 1. Java环境变量问题：https://blog.csdn.net/weixin_37550903/article/details/80672580
 2. JRE和JDK问题
+3. 随机数导致启动慢的问题：https://faceghost.com/article/527241
 
 ## Logs
 
