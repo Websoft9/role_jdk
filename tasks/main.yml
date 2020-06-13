@@ -1,14 +1,14 @@
-- import_tasks: RedHat.yml
-  when: ansible_os_family == 'RedHat'
+#1 install JDK by OS_family
+- name: Install this role on {{ansible_os_family}}
+  include: "{{ansible_os_family}}.yml"
 
-- import_tasks: Debian.yml
-  when: ansible_os_family == 'Debian' 
-
+#2 Configure
 - name: Setting JRE Securerandom
   lineinfile:
     path: /usr/lib/jvm/jre/lib/security/java.security
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
 
+# Check version
 - name: Check JAVA Version
   shell: sudo sh -c "java -version 2>> /data/logs/install_version.txt"
