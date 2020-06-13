@@ -4,5 +4,11 @@
 - import_tasks: Debian.yml
   when: ansible_os_family == 'Debian' 
 
+- name: Setting JRE Securerandom
+  lineinfile:
+    path: /usr/lib/jvm/jre/lib/security/java.security
+    regexp: 'securerandom.source=file:/dev/random'
+    line: 'securerandom.source=file:/dev/./urandom'
+
 - name: Check JAVA Version
   shell: sudo sh -c "java -version 2>> /data/logs/install_version.txt"
