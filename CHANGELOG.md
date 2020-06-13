@@ -3,7 +3,8 @@
 ## To do
 
 1. Java环境变量问题：https://blog.csdn.net/weixin_37550903/article/details/80672580 JAVA_HOME
-2. 考虑加入Oracle JDK 支持
+2. JDK openjdk-11-jre ubuntu 报错
+3. 考虑加入Oracle JDK 支持
    ```
     - name: add Oracle JAVA PPA
       apt_repository:
