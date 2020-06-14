@@ -9,6 +9,12 @@
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
 
+- name: Set JAVA environment variable
+  shell: |
+    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
+    echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
+    source /etc/profile
+  
 # Check version
 - name: Check JAVA Version
   shell: sudo sh -c "java -version 2>> /data/logs/install_version.txt"
