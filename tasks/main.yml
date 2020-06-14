@@ -11,10 +11,10 @@
 
 - name: Set JAVA environment variable
   shell: |
+    export JAVA_HOME=/usr/lib/jvm/java
     echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
     echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
-    export JAVA_HOME=/usr/lib/jvm/java
-    . /etc/profile
+    source /etc/profile
   
 # Check version
 - name: Check JAVA Version
