@@ -14,6 +14,15 @@
     echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
     echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
     source /etc/profile
+    
+- name: Set JAVA environment variable
+  shell: echo $JAVA_HOME
+  register: java_env
+
+- name: check JAVA_HOME
+  debug:
+    var: java_env.stdout
+  
   
 # Check version
 - name: Check JAVA Version
