@@ -9,12 +9,18 @@
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
 
-- name: Set JAVA environment variable
-  shell: |
-    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
-    echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
-    source /etc/profile
+- name: Upload JAVA environment settings script
+  template:
+    src: env.sh
+    dest: '/tmp'
+    mode: 0750
     
+- name: Install JAVA environment settings script
+  shell: bash install.sh
+  args:
+    chdir: /tmp
+
+# debug
 - name: Set JAVA environment variable
   shell: echo $JAVA_HOME
   register: java_env
