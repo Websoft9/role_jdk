@@ -16,7 +16,7 @@
     mode: 0750
     
 - name: Install JAVA environment settings script
-  shell: bash install.sh
+  shell: bash env.sh
   args:
     chdir: /tmp
 
