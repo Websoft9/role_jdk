@@ -10,9 +10,7 @@
     line: 'securerandom.source=file:/dev/./urandom'
 
 - name: Install JAVA environment settings script
-  shell: |
-    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/bashrc
-    export JAVA_HOME=/usr/lib/jvm/java
+  shell: export JAVA_HOME=/usr/lib/jvm/java
     
 - debug: msg="{{ lookup('env','JAVA_HOME') }} is an environment variable"
 
