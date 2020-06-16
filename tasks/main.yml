@@ -10,7 +10,7 @@
     line: 'securerandom.source=file:/dev/./urandom'
     
 - name: Install JAVA environment settings script
-  shell: 
+  shell: |
     echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
     export JAVA_HOME=/usr/lib/jvm/java
 
