@@ -12,7 +12,7 @@
 
 - name: Install JAVA environment settings script
   shell: |
-    echo "export JAVA_HOME=/usr/lib/jvm/java >> /etc/bashrc"
+    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/bashrc
     export JAVA_HOME=/usr/lib/jvm/java
 
 # debug
