@@ -8,10 +8,11 @@
     path: /usr/lib/jvm/jre/lib/security/java.security
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
-    
+
+
 - name: Install JAVA environment settings script
   shell: |
-    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
+    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/bashrc
     export JAVA_HOME=/usr/lib/jvm/java
 
 # debug
