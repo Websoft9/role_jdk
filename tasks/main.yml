@@ -9,7 +9,13 @@
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
 
-- name: Install JAVA environment settings script
+- name: Copy jdk_env to /etc/profile.d
+  template:
+    src: jdk_env.sh
+    dest: '/etc/profile.d'
+    mode: 0640
+    
+- name: Export JAVA_HOME environment variable for this shell
   shell: export JAVA_HOME=/usr/lib/jvm/java
     
 - debug: msg="{{ lookup('env','JAVA_HOME') }} is an environment variable"
