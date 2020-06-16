@@ -12,7 +12,6 @@
 - name: Install JAVA environment settings script
   shell: 
     echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
-    echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
     export JAVA_HOME=/usr/lib/jvm/java
 
 # debug
