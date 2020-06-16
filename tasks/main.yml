@@ -8,17 +8,12 @@
     path: /usr/lib/jvm/jre/lib/security/java.security
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
-
-- name: Upload JAVA environment settings script
-  template:
-    src: env.sh
-    dest: '/tmp'
-    mode: 0750
     
 - name: Install JAVA environment settings script
-  shell: bash env.sh
-  args:
-    chdir: /tmp
+  shell: 
+    echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
+    echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
+    export JAVA_HOME=/usr/lib/jvm/java
 
 # debug
 - name: Set JAVA environment variable
