@@ -19,15 +19,6 @@
 
   - name: Export JAVA_HOME environment variable for this shell
     shell: export JAVA_HOME=/usr/lib/jvm/java
-
-# debug
-- name: Set JAVA environment variable
-  shell: echo $JAVA_HOME
-  register: java_env
-
-- name: check JAVA_HOME
-  debug:
-    var: java_env.stdout
   
 # Check version
 - name: Check JAVA Version
