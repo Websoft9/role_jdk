@@ -20,6 +20,6 @@
   - name: Export JAVA_HOME environment variable for this shell
     shell: export JAVA_HOME=/usr/lib/jvm/java
   
-# Check version
+#3 Check version
 - name: Check JAVA Version
   shell: sudo sh -c "java -version 2>> /data/logs/install_version.txt"
