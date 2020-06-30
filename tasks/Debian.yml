@@ -4,3 +4,6 @@
   apt:
     name: "openjdk-{{jdk_version}}-{{jdk_distribution}}"
     update_cache: yes
+
+- name: ubantu set soft link
+  shell: ln -sf /usr/lib/jvm/java-*/jre /usr/lib/jvm/jre
