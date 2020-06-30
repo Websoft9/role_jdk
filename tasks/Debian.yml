@@ -6,4 +6,4 @@
     update_cache: yes
 
 - name: ubantu set soft link
-  shell: ln -sf /usr/lib/jvm/~^java.*/jre /usr/lib/jvm/jre
+  shell: ln -sf /usr/lib/jvm/~^java.*/jre /usr/lib/jvm
