@@ -8,4 +8,4 @@
 - name: ubantu set soft link
   shell: |
     ln -sf /usr/lib/jvm/java-*/jre /usr/lib/jvm/
-    ln -sf /usr/lib/jvm/java-* /usr/lib/jvm/java
+    ln -sf /usr/bin/java /usr/lib/jvm/java
