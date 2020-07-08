@@ -12,9 +12,3 @@
      ln -sf /usr/lib/jvm/java-* /usr/lib/jvm/java
      ln -sf /usr/lib/jvm/java /usr/
 #     ln -sf /usr/bin/java /usr/lib/jvm/java/
-#    ln -sf /usr/lib/jvm/java-*/bin/java
-#    ln -sf /usr/lib/jvm/java-*/jre /usr/lib/jvm/
-#    ln -sf /usr/lib/jvm/java-* /usr/lib/jvm/java
-#    ln -sf /usr/bin/java /usr/lib/jvm/java-8-*/
-#    ln -sf /usr/lib/jvm/java-8-*/ /usr/
-#    ln -sf /usr/java-8-* /usr/java
