@@ -5,7 +5,7 @@
     name: "openjdk-{{jdk_version}}-{{jdk_distribution}}"
     update_cache: yes
 
-- name: ubantu set soft link
+- name: ubuntu set soft link
   shell: |
      rm -f /usr/lib/jvm/java-1*
      ln -sf /usr/lib/jvm/java-*/jre /usr/lib/jvm/
