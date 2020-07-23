@@ -5,7 +5,7 @@
 jdk_version: "8" 
 
 # jre or jdk
-jdk_distribution: "jre"
+jdk_distribution: "jdk"
 
 # jdk metas, default for JRE
 # JDK=JRE+development kit
