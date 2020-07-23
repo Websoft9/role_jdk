@@ -52,3 +52,8 @@ roles:
 #### JDK与JRE有什么区别？
 
 JDK=JRE+开发者工具包，JRE 全称是Java Runtime Environment，JDK全称是Java Development Kit  
+
+#### What's jdk headless version?
+
+Headless is the same version than the latter without the support of keyboard, mouse and display systems. Hence it has less dependencies for runtime (no all Xorg display packages chain …) and it makes it more suitable for server applications.
+
