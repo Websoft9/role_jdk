@@ -8,6 +8,7 @@
     path: /usr/lib/jvm/jre/lib/security/java.security
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
+  when: jdk_version != "8"
 
 ## set environment variable
 - block:
