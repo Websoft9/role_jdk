@@ -9,6 +9,13 @@
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
   when: jdk_version == "8"
+  
+- name: Setting JRE Securerandom
+  lineinfile:
+    path: /usr/lib/jvm/java/conf/security/java.security
+    regexp: 'securerandom.source=file:/dev/random'
+    line: 'securerandom.source=file:/dev/./urandom'
+  when: jdk_version == "11"
 
 ## set environment variable
 - block:
