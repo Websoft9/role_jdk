@@ -14,7 +14,7 @@
     name: "{{yum_name}}"
     state: present
 
-- name: Set soft link
+- name: Set soft link for Java
   shell: |
      ln -sf /usr/lib/jvm/java-* /usr/lib/jvm/java
      ln -sf /usr/lib/jvm/java /usr/
