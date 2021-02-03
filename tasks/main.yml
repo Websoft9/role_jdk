@@ -3,19 +3,15 @@
   include: "{{ansible_os_family}}.yml"
 
 #2 Configure
+- name: Get the security/java.security path
+  shell: find / -name java.security | grep security/java.security
+  register: jdk_security
+
 - name: Setting JRE Securerandom
   lineinfile:
-    path: /usr/lib/jvm/jre/lib/security/java.security
+    path: "{{jdk_security.stdout}}"
     regexp: 'securerandom.source=file:/dev/random'
     line: 'securerandom.source=file:/dev/./urandom'
-  when: jdk_version == "8"
-  
-- name: Setting JRE Securerandom
-  lineinfile:
-    path: /usr/lib/jvm/java/conf/security/java.security
-    regexp: 'securerandom.source=file:/dev/random'
-    line: 'securerandom.source=file:/dev/./urandom'
-  when: jdk_version == "11"
 
 ## set environment variable
 - block:
