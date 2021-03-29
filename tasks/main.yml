@@ -4,7 +4,7 @@
 
 #2 Configure
 - name: Get the security/java.security path
-  shell: find / -name java.security -type f | grep security/java.security | grep -v Cloud
+  shell: find / -name java.security -type f | grep security/java.security | grep -v Cloud |grep -v elasticsearch
   register: jdk_security
 
 - name: Setting JRE Securerandom
